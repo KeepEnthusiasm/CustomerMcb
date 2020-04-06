@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- 配置分页插件 -->
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+            <!-- 设置数据库类型 Oracle,Mysql,MariaDB,SQLite,Hsqldb,PostgreSQL六种数据库-->
+            <property name="helperDialect" value="mysql"/>
+        </plugin>
+    </plugins>
+
+<!--    配置对应的mapper.xml文件-->
+    <mappers>
+        <!--这是告诉Mybatis区哪找持久化类的映射文件，对于在src下的文件直接写文件名，
+            如果在某包下，则要写明路径,如：com/mybatistest/config/User.xml-->
+        <mapper resource="customerMapper.xml"></mapper>
+        <mapper resource="noticeMapper.xml"></mapper>
+        <mapper resource="userMapper.xml"></mapper>
+    </mappers>
+</configuration>

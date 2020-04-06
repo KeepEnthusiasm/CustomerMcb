@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.mcb.dao.ICustomerDao">
+    <delete id="deleteSelect" parameterType="int">
+        delete from customer where cid in
+        <foreach collection="ids" open="(" close=")" item="id" separator=",">
+            #{id}
+        </foreach>
+    </delete>
+    <select id="findByName" resultType="cn.mcb.pojo.Customer">
+        select *
+        from customer
+        where cname like concat('%',#{cname},'%')
+    </select>
+
+    <select id="findByAddress" resultType="cn.mcb.pojo.Customer">
+        select *
+        from customer
+        where caddress like concat('%',#{caddress},'%')
+    </select>
+</mapper>

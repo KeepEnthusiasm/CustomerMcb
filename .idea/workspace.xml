@@ -6,69 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fcd0e0b-eb21-4cc9-86d0-fe939f782110" name="Default Changelist" comment="2020/04/13">
-      <change afterPath="$PROJECT_DIR$/##客户信息管理系统.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mcb/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mcb/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mcb/dao/ICustomerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mcb/dao/ICustomerDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mcb/dao/IUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mcb/dao/IUserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mcb/dao/daoImpl/CustomerDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mcb/dao/daoImpl/CustomerDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mcb/dao/daoImpl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mcb/dao/daoImpl/UserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mcb/pojo/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mcb/pojo/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mcb/service/ICustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mcb/service/ICustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mcb/service/serviceImpl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mcb/service/serviceImpl/CustomerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/mcb/test/testSpring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/mcb/test/testSpring.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/customerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/customerMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/springmvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/noticeList-admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/noticeList-admin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/noticeList-user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/noticeList-user.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/system-admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/system-admin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/system-user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/system-user.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/userList-admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/userList-admin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/mcb/controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/mcb/controller/CustomerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/mcb/dao/ICustomerDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/mcb/dao/ICustomerDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/mcb/dao/IUserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/mcb/dao/IUserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/mcb/dao/daoImpl/CustomerDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/mcb/dao/daoImpl/CustomerDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/mcb/dao/daoImpl/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/mcb/dao/daoImpl/UserDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/mcb/pojo/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/mcb/pojo/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/mcb/service/ICustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/mcb/service/ICustomerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/mcb/service/serviceImpl/CustomerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/mcb/service/serviceImpl/CustomerServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/mcb/test/testSpring.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/mcb/test/testSpring.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/customerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/customerMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring-mybatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring-mybatis.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/springmvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/userMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cus_sys_mcb.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/cus_sys_mcb.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cus_sys_mcb/WEB-INF/classes/cn/mcb/controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cus_sys_mcb/WEB-INF/classes/cn/mcb/controller/CustomerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cus_sys_mcb/WEB-INF/classes/cn/mcb/dao/ICustomerDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cus_sys_mcb/WEB-INF/classes/cn/mcb/dao/ICustomerDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cus_sys_mcb/WEB-INF/classes/cn/mcb/dao/IUserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cus_sys_mcb/WEB-INF/classes/cn/mcb/dao/IUserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cus_sys_mcb/WEB-INF/classes/cn/mcb/dao/daoImpl/CustomerDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cus_sys_mcb/WEB-INF/classes/cn/mcb/dao/daoImpl/CustomerDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cus_sys_mcb/WEB-INF/classes/cn/mcb/dao/daoImpl/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cus_sys_mcb/WEB-INF/classes/cn/mcb/dao/daoImpl/UserDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cus_sys_mcb/WEB-INF/classes/cn/mcb/pojo/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cus_sys_mcb/WEB-INF/classes/cn/mcb/pojo/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cus_sys_mcb/WEB-INF/classes/cn/mcb/service/ICustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cus_sys_mcb/WEB-INF/classes/cn/mcb/service/ICustomerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cus_sys_mcb/WEB-INF/classes/cn/mcb/service/serviceImpl/CustomerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cus_sys_mcb/WEB-INF/classes/cn/mcb/service/serviceImpl/CustomerServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cus_sys_mcb/WEB-INF/classes/cn/mcb/test/testSpring.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cus_sys_mcb/WEB-INF/classes/cn/mcb/test/testSpring.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cus_sys_mcb/WEB-INF/classes/customerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/cus_sys_mcb/WEB-INF/classes/customerMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cus_sys_mcb/WEB-INF/classes/spring-mybatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/cus_sys_mcb/WEB-INF/classes/spring-mybatis.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cus_sys_mcb/WEB-INF/classes/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/cus_sys_mcb/WEB-INF/classes/springmvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cus_sys_mcb/WEB-INF/classes/userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/cus_sys_mcb/WEB-INF/classes/userMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cus_sys_mcb/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/cus_sys_mcb/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cus_sys_mcb/images/bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cus_sys_mcb/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/cus_sys_mcb/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cus_sys_mcb/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/cus_sys_mcb/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cus_sys_mcb/noticeList-admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/cus_sys_mcb/noticeList-admin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cus_sys_mcb/noticeList-user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/cus_sys_mcb/noticeList-user.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cus_sys_mcb/system-admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/cus_sys_mcb/system-admin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cus_sys_mcb/system-user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/cus_sys_mcb/system-user.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cus_sys_mcb/userList-admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/cus_sys_mcb/userList-admin.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="5fcd0e0b-eb21-4cc9-86d0-fe939f782110" name="Default Changelist" comment="2020/04/13" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -111,7 +49,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/mcb/service/serviceImpl/CustomerServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
+            <state relative-caret-position="1389">
               <caret line="200" selection-start-line="200" selection-end-line="200" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -301,6 +239,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="cus_sys_mcb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cus_sys_mcb" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Production'; set:Production; class com.intellij.psi.search.scope.ProjectProductionScope">
           <expand>
@@ -333,7 +282,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -639,6 +587,7 @@
       <workItem from="1590574009471" duration="11331000" />
       <workItem from="1591057920886" duration="136000" />
       <workItem from="1591069191879" duration="952000" />
+      <workItem from="1594773917151" duration="582000" />
     </task>
     <task id="LOCAL-00001" summary="2020/04/13">
       <created>1586791011301</created>
@@ -683,7 +632,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="407755000" />
+    <option name="totallyTimeSpent" value="408337000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -696,9 +645,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29942694" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3037249" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1167,7 +1115,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/mcb/service/serviceImpl/CustomerServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
+        <state relative-caret-position="1389">
           <caret line="200" selection-start-line="200" selection-end-line="200" />
           <folding>
             <element signature="imports" expanded="true" />

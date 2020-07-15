@@ -2,8 +2,11 @@ package cn.mcb.dao.daoImpl;
 
 import cn.mcb.dao.ICustomerDao;
 import cn.mcb.pojo.Customer;
+import cn.mcb.service.ICustomerService;
+import cn.mcb.utils.CustomerPlus;
 
 import java.util.List;
+import java.util.Map;
 
 public class CustomerDaoImpl implements ICustomerDao {
     @Override
@@ -42,6 +45,11 @@ public class CustomerDaoImpl implements ICustomerDao {
     }
 
     @Override
+    public void addCusList(List<Customer> customers) {
+
+    }
+
+    @Override
     public List<Customer> findByAge(int cage) {
         return null;
     }
@@ -63,6 +71,76 @@ public class CustomerDaoImpl implements ICustomerDao {
 
     @Override
     public List<Customer> findBycreattime(String ccreattime) {
+        return null;
+    }
+
+    @Override
+    public List<Customer> findByConditionForNew(Map map) {
+        return null;
+    }
+
+    @Override
+    public int selectUserCounts() {
+        return 0;
+    }
+
+    @Override
+    public int selectCustomerCounts() {
+        return 0;
+    }
+
+    @Override
+    public int selectNoticeCounts() {
+        return 0;
+    }
+
+    @Override
+    public int selectcusDayConuts() {
+        return 0;
+    }
+
+    @Override
+    public int selectcusWeekConuts() {
+        return 0;
+    }
+
+    @Override
+    public int selectcusMonthConuts() {
+        return 0;
+    }
+
+    @Override
+    public int selectcusYearConuts() {
+        return 0;
+    }
+
+    @Override
+    public List<Map> selectClevelAllCounts() {
+        return null;
+    }
+
+    @Override
+    public List<Map> selectCgenderAllCounts() {
+        return null;
+    }
+
+    @Override
+    public List<Map> selectWeekEveryDayCountsForNormal() {
+        return null;
+    }
+
+    @Override
+    public List<Map> selectWeekEveryDayCountsForGold() {
+        return null;
+    }
+
+    @Override
+    public List<Map> selectWeekEveryDayCountsForDiamond() {
+        return null;
+    }
+
+    @Override
+    public List<Map> selectWeekEveryDayCountsForTop() {
         return null;
     }
 }

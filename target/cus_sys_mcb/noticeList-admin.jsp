@@ -211,6 +211,7 @@
             }
             ,btn2: function(index, layero){
                 $(".layui-laypage-btn")[0].click();
+                location.reload();
             }
         });
         $.ajax({
@@ -280,25 +281,25 @@
     <div class="layui-form-item">
         <label class="layui-form-label">标题</label>
         <div class="layui-input-block">
-            <input id="nottitle" type="text" name="ntitle" class="layui-input"/>
+            <input id="nottitle" type="text" placeholder="请输入标题" name="ntitle" class="layui-input"/>
         </div>
     </div>
     <div class="layui-form-item">
         <label class="layui-form-label">主题</label>
         <div class="layui-input-block">
-            <textarea id="notcontent" type="text" style="width: 550px;height: 400px;text-align: left;overflow-wrap:break-word;overflow-y:scroll;" name="ncontent" class="layui-input"></textarea>
+            <textarea id="notcontent" type="text" placeholder="请输入主题" style="width: 550px;height: 400px;text-align: left;overflow-wrap:break-word;overflow-y:scroll;" name="ncontent" class="layui-input"></textarea>
         </div>
     </div>
     <div class="layui-form-item">
         <label class="layui-form-label" style="width: 100px">发表人</label>
         <div class="layui-input-block">
-            <input id="notsender" type="text"   name="nsender" class="layui-input"/>
+            <input id="notsender" type="text"  placeholder="请输入发表人"  name="nsender" class="layui-input"/>
         </div>
     </div>
     <div class="layui-form-item">
         <label class="layui-form-label" style="width: 100px">发表时间</label>
         <div class="layui-input-block">
-            <input id="nottime" type="text" name="ntime" class="layui-input"/>
+            <input id="nottime" type="text" placeholder="请输入发表时间" name="ntime" class="layui-input"/>
         </div>
     </div>
 </form>

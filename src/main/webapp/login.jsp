@@ -32,10 +32,9 @@
         };
     </script>
 </head>
-<body class="login-bg">
+<body style="background-color: #EFEEF0">
 <div class="login layui-anim layui-anim-up">
-    <div class="message">H公司客户信息管理系统登录</div>
-    <div id="darkbannerwrap"></div>
+    <div style="color: #009f95;font-size: 24px;margin:20px;margin-left:40px;font-family: 微软雅黑;">H公司客户信息管理系统</div>
     <form id="loginForm"   method="post" >
         <input id="username" name="uname" placeholder="用户名"  type="text" lay-verify="required" class="layui-input" >
         <hr class="hr15">

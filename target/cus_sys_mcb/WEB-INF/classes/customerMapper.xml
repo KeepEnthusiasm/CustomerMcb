@@ -19,4 +19,61 @@
         from customer
         where caddress like concat('%',#{caddress},'%')
     </select>
+    <insert id="addCusList" >
+        INSERT INTO customer
+        (cname,cage,cphone,cbirthday,ccreattime,caddress,cgender,cemail,clevel)
+        VALUES
+        <foreach collection ="list" item="customer" separator =",">
+            (#{customer.cname},#{customer.cage},#{customer.cphone},
+            #{customer.cbirthday},#{customer.ccreattime},#{customer.caddress},
+            #{customer.cgender},#{customer.cemail},#{customer.clevel})
+        </foreach >
+    </insert>
+
+    <select id="findByConditionForNew" resultType="cn.mcb.pojo.Customer" parameterType="Map">
+        select *
+        from customer
+        where 1=1
+        <if test="cname != '' and cname != null">
+            and cname like concat('%',#{cname},'%')
+        </if>
+        <if test="cage != 0  and cage != null">
+            and cage =#{cage}
+        </if>
+        <if test="cgender != '' and cgender != null">
+            and cgender =#{cgender}
+        </if>
+        <if test="clevel != '' and clevel != null">
+            and clevel=#{clevel}
+        </if>
+        <if test="caddress != '' and caddress != null">
+            and caddress like concat('%',#{caddress},'%')
+        </if>
+        <if test="cphone != '' and cphone != null">
+            and cphone like concat('%',#{cphone},'%')
+        </if>
+        <if test="ccreattimeBegin != '' and ccreattimeBegin != null">
+            and ccreattime  <![CDATA[>=]]> #{ccreattimeBegin}
+        </if>
+        <if test="ccreattimeEnd != '' and ccreattimeEnd != null">
+            and ccreattime  <![CDATA[<=]]>#{ccreattimeEnd}
+        </if>
+        <if test="cemail != '' and cemail != null">
+            and cemail like concat('%',#{cemail},'%')
+        </if>
+    </select>
+<!--    <select id="selectCgenderAllCounts" resultMap="byFiledId">-->
+<!--         SELECT  cgender ,COUNT(ALL cid) AS cgendercounts FROM customer GROUP BY (cgender)-->
+<!--    </select>-->
+
+<!--    <resultMap id="byFiledId" type="java.util.Map">-->
+<!--    <result column="cgender" property="cgender" jdbcType="VARCHAR" />-->
+<!--    <result column="cgendercounts" property="cgendercounts" jdbcType="VARCHAR" />-->
+<!--    </resultMap>-->
+<!--    <resultMap id="byFiledId" type="Id">-->
+<!--        <id property="id" column="cgender"></id>-->
+<!--        <collection property="cgendercounts" ofType="String" javaType="ArrayList">-->
+<!--            <result column="cgendercounts"></result>-->
+<!--        </collection>-->
+<!--    </resultMap>-->
 </mapper>

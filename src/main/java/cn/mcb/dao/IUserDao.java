@@ -8,6 +8,7 @@ import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * 用户接口
@@ -43,6 +44,10 @@ public interface IUserDao {
      */
     @Delete(" delete from user where uid=#{id};")
     public void delete(int id);
+    /**
+     * 删除用户
+     */
+    public void deleteSelectForMap(List<Map> list);
     /**
      * 通过id查找
      * @param id

@@ -18,5 +18,6 @@
         <mapper resource="customerMapper.xml"></mapper>
         <mapper resource="noticeMapper.xml"></mapper>
         <mapper resource="userMapper.xml"></mapper>
+        <!-- aaa-->
     </mappers>
 </configuration>

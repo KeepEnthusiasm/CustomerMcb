@@ -20,6 +20,8 @@
         .demo-carousel{height: 200px; line-height: 200px; text-align: center;}
         *{font-family:微软雅黑}
         label{font-size: 15px;}
+        .layui-inline  input,select{width: 120px!important;}
+        .layui-inline  .layui-form-label{width: 90px!important;}
     </style>
 
 </head>
@@ -32,10 +34,129 @@
     <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
     <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a><br>
 </script>
+<script type="text/html" id="toolbarDemo">
+    <div>
+        <form id="selectByCondition" class="layui-form" >
+            <div class="layui-row ">
+                <div class="layui-inline">
+                    <label class="layui-form-label" >姓名</label>
+                    <div class="layui-inline " >
+                        <input type="text" id="selectCname" placeholder="请输入姓名"   name="cname"  autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label" >年龄</label>
+                    <div class="layui-inline " >
+                        <input type="text" id="selectCage" placeholder="请输入年龄" name="cage"  autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+
+                <div class="layui-inline">
+                    <label class="layui-form-label" >性别</label>
+                    <div class="layui-inline " >
+                        <select id="selectCgender"  name="cgender" lay-verify="required" >
+                            <option value="">请选择性别</option>
+                            <option value="男">男</option>
+                            <option value="女">女</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label" >创建日期</label>
+                    <div class="layui-input-inline" >
+                        <input type="text" id="selectCcreattimeBegin" placeholder="请输入起始日期"  autocomplete="off" class="layui-input">
+                    </div>
+                    <div class="layui-input-inline">
+                        <label>-</label>
+                    </div>
+                    <div class="layui-input-inline" >
+                        <input type="text" id="selectCcreattimeEnd" placeholder="请输入结束日期" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-row">
+            <div class="layui-inline ">
+                <label class="layui-form-label"  >级别</label>
+                <div class="layui-inline" >
+                    <select id="selectClevel"  name="clevel" lay-verify="required" >
+                        <option value="">请选择级别</option>
+                        <option value="普通会员">普通会员</option>
+                        <option value="黄金会员">黄金会员</option>
+                        <option value="钻石会员">钻石会员</option>
+                        <option value="至尊会员">至尊会员</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">地址</label>
+                <div class="layui-inline ">
+                    <input type="text" id="selectCaddress" placeholder="请输入地址"  name="caddress"  autocomplete="off" class="layui-input">
+                </div>
+            </div>  <div class="layui-inline">
+                <label class="layui-form-label">邮箱</label>
+                <div class="layui-inline ">
+                    <input type="text" id="selectCemail" name="cemail" placeholder="请输入邮箱" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline ">
+                <label class="layui-form-label"  >联系方式</label>
+                <div class="layui-inline " >
+                    <input type="text" id="selectCphone"   name="cphone" placeholder="请输入手机号" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline layui-show-xs-block">
+                <div class="layui-inline " >
+                    <button type="button" class="layui-btn layui-btn layui-btn-sm" lay-event="search" style="margin-left:13px ">
+                        <i class="layui-icon">&#xe615;</i>
+                        查询
+                    </button>
+                </div>
+            </div>
+            <div class="layui-inline layui-show-xs-block">
+                <div class="layui-inline " >
+                    <button type="reset" class="layui-btn layui-btn-primary layui-btn-sm" style="width: 47px;" >
+                        <i class="layui-icon">&#xe639;</i>
+                    </button>
+                </div>
+            </div>
+            </div>
+            <div class="layui-inline layui-show-xs-block">
+                <button type="button" class="layui-btn layui-btn layui-btn-sm " onclick="location.reload();">
+                    <i class="layui-icon">&#xe669;</i>
+                    刷新
+                </button>
+            </div>
+            <div class="layui-inline layui-show-xs-block">
+                <button type="button" class="layui-btn layui-btn-normal layui-btn-sm " lay-event="add">
+                    <i class="layui-icon">&#xe654;</i>
+                    添加
+                </button>
+            </div>
+            <div class="layui-inline layui-show-xs-block">
+                <button type="button" class="layui-btn layui-btn-sm" lay-event="update">
+                    <i class="layui-icon">&#xe642;</i>
+                    编辑
+                </button>
+            </div>
+            <div class="layui-inline layui-show-xs-block">
+                <button type="button" class="layui-btn layui-btn-danger layui-btn-sm" lay-event="delete">
+                    <i class="layui-icon">&#xe640;</i>
+                    批量删除
+                </button>
+            </div>
+            <div class="layui-inline layui-show-xs-block">
+                <button id="upload" type="button" class="layui-btn layui-btn layui-btn-sm" >
+                    <i class="layui-icon">&#xe67d;</i>
+                    导入数据
+                </button>
+            </div>
+        </form>
+    </div>
+</script>
 <script src="lib/layui/layui.js"></script>
 <script src="js/jquery.min.js"></script>
 <script>
-    layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'element', 'slider'], function(){
+    layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'element', 'slider','form'], function(){
         var laydate = layui.laydate //日期
             ,laypage = layui.laypage //分页
             ,layer = layui.layer //弹层
@@ -44,27 +165,24 @@
             ,upload = layui.upload //上传
             ,element = layui.element //元素操作
             ,slider = layui.slider//滑块
-        //监听Tab切换
-        element.on('tab(demo)', function(data){
-            layer.tips('切换了 '+ data.index +'：'+ this.innerHTML, this, {
-                tips: 1
-            });
-        });
+            ,form=layui.form
 
         //执行一个 table 实例
-        table.render({
+        var tableIns=table.render({
             elem: '#demo'
-            ,height:'600px'
+            ,height:'630px'
             ,url: 'selectListForLayui' //数据接口
             ,response: {
                 dataName: 'customerList' //规定数据列表的字段名称，默认：data
             }
             ,request: {
                 pageName: 'pn' //页码的参数名称，默认：page
-                ,limitName: 'limit' //每页数据量的参数名，默认：limit
+                ,limitName: 'limit', //每页数据量的参数名，默认：limit
             }
             ,title: '用户表'
-            ,text:'您查找的数据为空！'
+            ,text: {
+                none: '暂无相关数据' //默认：无数据。注：该属性为 layui 2.2.5 开始新增
+            }
             ,page: true //开启分页
             ,toolbar: 'default' //开启工具栏，此处显示默认图标，可以自定义模板，详见文档
             ,toolbar: '#toolbarDemo'
@@ -76,7 +194,7 @@
                 ,{field: 'cage', title: '年龄', width: 75, sort: true, totalRow: true}
                 ,{field: 'cgender', title: '性别', width:80, sort: true}
                 ,{field: 'clevel', title: '级别', width: 90, sort: true, totalRow: true}
-                ,{field: 'caddress', title: '地址', width:150}
+                ,{field: 'caddress', title: '地址', width:120}
                 ,{field: 'cphone', title: '手机号', width: 130}
                 ,{field: 'cemail', title: '邮箱', width: 160}
                 ,{field: 'ccreattime', title: '创建日期', width: 110}
@@ -128,17 +246,58 @@
                     }
                     break;
                 case 'search':
-                    var selectCondition=$("#selectCondition").find("option:selected").val();
-                    var name=$(" input[ name='select' ] ").val();
-                    console.log(name);
-                    table.reload('demo',{
-                        url:'selectByCondition'
-                        ,where:{text: name
-                            ,selectCondition:selectCondition
+                    var cname=$("#selectCname").val(),
+                    cage=$("#selectCage").val(),
+                        cgender=$("#selectCgender").val(),
+                        clevel=$("#selectClevel").val(),
+                        caddress=$("#selectCaddress").val(),
+                        cphone=$("#selectCphone").val(),
+                        ccreattimeBegin=$("#selectCcreattimeBegin").val(),
+                        ccreattimeEnd=$("#selectCcreattimeEnd").val(),
+                        cemail=$("#selectCemail").val()
+                    tableIns.reload({
+                         url: 'selectByConditionForNew'
+                        ,where: {
+                            cname:cname,
+                            cage:cage,
+                            cgender:cgender,
+                            clevel:clevel,
+                            caddress:caddress,
+                            cphone:cphone,
+                            ccreattimeBegin:ccreattimeBegin,
+                            ccreattimeEnd:ccreattimeEnd,
+                            cemail:cemail
+                          }
+                    });
+                    $("#selectCname").val(cname);
+                    $("#selectCage").val(cage);
+                    $("#selectClevel").val(clevel);
+                    $("#selectCaddress").val(caddress);
+                    $("#selectCphone").val(cphone);
+                    $("#selectCcreattimeBegin").val(ccreattimeBegin);
+                    $("#selectCcreattimeEnd").val(ccreattimeEnd);
+                    $("#selectCemail").val(cemail);
+                    $("#selectCgender").val(cgender);
+
+                    laydate.render({
+                        elem: '#selectCcreattimeBegin'
+                        ,position: 'fixed'
+                        ,trigger: 'click'
+                        ,calendar: true //是否开启公历重要节日
+                        ,done: function(value, date, endDate){
+                            $("#selectCcreattimeBegin").attr("value",value);
+                        }
+                    });
+                    laydate.render({
+                        elem: '#selectCcreattimeEnd'
+                        ,position: 'fixed'
+                        ,trigger: 'click'
+                        ,calendar: true //是否开启公历重要节日
+                        ,done: function(value, date, endDate){
+                            $("#selectCcreattimeEnd").attr("value",value);
                         }
                     });
                     break;
-
             };
         });
 
@@ -163,7 +322,7 @@
                             layer.msg('客户信息删除失败');
                         }
                     });
-                                });
+                });
             } else if(layEvent === 'edit'){
                 editCustomer(cid);
                 updateModal();
@@ -186,7 +345,25 @@
             ,trigger: 'click'
             ,calendar: true //是否开启公历重要节日
             ,done: function(value, date, endDate){
-                $("#cusCreattime").attr("value",value);
+                $("#cusBirthday").attr("value",value);
+            }
+        });
+        laydate.render({
+            elem: '#selectCcreattimeBegin'
+            ,position: 'fixed'
+            ,trigger: 'click'
+            ,calendar: true //是否开启公历重要节日
+            ,done: function(value, date, endDate){
+                $("#selectCcreattimeBegin").attr("value",value);
+            }
+        });
+        laydate.render({
+            elem: '#selectCcreattimeEnd'
+            ,position: 'fixed'
+            ,trigger: 'click'
+            ,calendar: true //是否开启公历重要节日
+            ,done: function(value, date, endDate){
+                $("#selectCcreattimeEnd").attr("value",value);
             }
         });
 
@@ -202,96 +379,102 @@
                 }
             }
         })
-    });
-            //弹出编辑模态框
-            function updateModal() {
-                layer.open({
-                    type: 1
-                    ,title: ['编辑信息', 'font-size:18px;']
-                    ,area: ['550px', '620px']
-                    ,content: $('#updateForm') //这里content是一个DOM，注意：最好该元素要存放在body最外层，否则可能被其它的相对元素所影响
-                    ,btn: ['修改', '返回']
-                    ,yes: function(index, layero){
+        upload.render({
+            elem: '#upload'
+            ,url: 'importExcel' //改成您自己的上传接口
+            ,accept: 'file' //普通文件
+            ,done: function(res){
+                layer.msg('上传成功');
+                console.log(res)
+            }
+        });
+
+        //弹出编辑模态框
+        function updateModal() {
+            layer.open({
+                type: 1
+                ,title: ['编辑信息', 'font-size:18px;']
+                ,area: ['550px', '620px']
+                ,content: $('#updateForm') //这里content是一个DOM，注意：最好该元素要存放在body最外层，否则可能被其它的相对元素所影响
+                ,btn: ['修改', '返回']
+                ,yes: function(index, layero){
                     //按钮【按钮一】的回调
-                        updateCustomer()
-                    }
-                     ,btn2: function(index, layero){
-                        $(".layui-laypage-btn")[0].click();
-                        $('#updateForm')[0].reset();
+                    updateCustomer()
                 }
-                });
-             }
-            //弹出添加模态框
-            function addModal() {
-                layer.open({
-                    type: 1
-                    ,title: ['添加信息', 'font-size:18px;']
-                    ,area: ['550px', '620px']
-                    ,content: $('#updateForm') //这里content是一个DOM，注意：最好该元素要存放在body最外层，否则可能被其它的相对元素所影响
-                    ,btn: ['添加', '返回']
-                    ,yes: function(index, layero){
-                        //按钮【按钮一】的回调
-                        addCustomer();
-                    }
-                    ,btn2: function(index, layero){
-                        window.location.reload();
-                    }
-                });
+                ,btn2: function(index, layero){
+                    $(".layui-laypage-btn")[0].click();
+                    $('#updateForm')[0].reset();
+                }
+            });
+        }
+        //弹出添加模态框
+        function addModal() {
+            layer.open({
+                type: 1
+                ,title: ['添加信息', 'font-size:18px;']
+                ,area: ['550px', '620px']
+                ,content: $('#updateForm') //这里content是一个DOM，注意：最好该元素要存放在body最外层，否则可能被其它的相对元素所影响
+                ,btn: ['添加', '返回']
+                ,yes: function(index, layero){
+                    //按钮【按钮一】的回调
+                    addCustomer();
+                }
+                ,btn2: function(index, layero){
+                    window.location.reload();
+                }
+            });
 
-            }
-                //回显信息
-            function editCustomer(id) {
-                $.ajax({
-                    type:"get",
-                    url:"updateCustomer",
-                    data:{"id":id},
-                    success:function(data) {
-                        $("#cusId").val(data.cid);
-                        $("#cusName").val(data.cname);
-                        $("#cusAge").val(data.cage);
-                        $("#cusAddress").val(data.caddress);
-                        $("#cusPhone").val(data.cphone);
-                        $("#cusEmail").val(data.cemail);
-                        $("#cusCreattime").val(data.ccreattime);
-                        $("#cusBirthday").val(data.cbirthday);
-                        if (data.cgender=="男"){
-                            $("#man").attr("checked","checked");
-                        } else{
-                            $("#woman").attr("checked","checked");
-                        }
-                        if(data.clevel=="黄金会员"){
-                            $("#checkLevel").find("option[value='黄金会员']").attr("selected",true);
-                        }
-
-                    }
-                });
-            }
-                //更新信息
-            function updateCustomer() {
-                    $.post("afterUpdateCustomer",$("#updateForm").serialize(),function(data){
-                        if(data == "0"){
-                            layer.msg("客户信息更新成功！",{icon:1,time: 1000});
-
-                        }else{
-                            layer.msg("客户信息更新失败！",{time: 1000});
-                        }
+        }
+        //回显信息
+        function editCustomer(id) {
+            $.ajax({
+                type:"get",
+                url:"updateCustomer",
+                data:{"id":id},
+                success:function(data) {
+                    form.val("updateForm", { //formTest 即 class="layui-form" 所在元素属性 lay-filter="" 对应的值
+                        "cid":data.cid
+                        ,"cname": data.cname // "name": "value"
+                        ,"cage": data.cage
+                        ,"cgender": data.cgender
+                        ,"caddress":data.caddress
+                        ,"cphone":data.cphone
+                        ,"cemail":data.cemail
+                        ,"ccreattime":data.ccreattime
+                        ,"cbirthday":data.cbirthday
+                        ,"clevel":data.clevel
                     });
-            }
-            function addCustomer() {
-                $.post("addCustomer",$("#updateForm").serialize(),function(data){
-                    if(data == "0"){
-                        layer.msg("客户添加成功！",{icon:1,time: 1000});
-                    }else{
-                        layer.msg("客户添加失败！",{time: 1000});
-                    }
-                });
-            }
+                }
+            });
+        }
+        //更新信息
+        function updateCustomer() {
+            $.post("afterUpdateCustomer",$("#updateForm").serialize(),function(data){
+                if(data == "0"){
+                    layer.msg("客户信息更新成功！",{icon:1,time: 1000});
+
+                }else{
+                    layer.msg("客户信息更新失败！",{time: 1000});
+                }
+            });
+        }
+        function addCustomer() {
+            $.post("addCustomer",$("#updateForm").serialize(),function(data){
+                if(data == "0"){
+                    layer.msg("客户添加成功！",{icon:1,time: 1000});
+                }else{
+                    layer.msg("客户添加失败！",{time: 1000});
+                }
+            });
+        }
+    });
+
 
 
 </script>
 </body>
 </html>
-<form hidden="hidden" class="layui-form layui-col-md-offset1" id="updateForm" style="margin-top: 1.25rem;margin-right: 20px;width: 400px;">
+<form hidden="hidden" class="layui-form layui-col-md-offset1" id="updateForm" lay-filter="updateForm" style="margin-top: 1.25rem;margin-right: 20px;width: 400px;">
     <input type="hidden" id="cusId" name="cid" value="1">
     <div class="layui-form-item">
         <label class="layui-form-label">姓名</label>
@@ -302,7 +485,7 @@
     <div class="layui-form-item">
         <label class="layui-form-label">年龄</label>
         <div class="layui-input-block">
-            <input id="cusAge" type="number" name="cage" required lay-verify="required" placeholder="请输入年龄" autocomplete="off" class="layui-input">
+            <input id="cusAge"  type="number" name="cage" required lay-verify="required" placeholder="请输入年龄" autocomplete="off" class="layui-input">
         </div>
     </div>
     <div class="layui-form-item">
@@ -354,48 +537,3 @@
         </div>
     </div>
 </form>
-<div id="toolbarDemo" hidden="hidden">
-    <form class="layui-form layui-col-space5">
-        <div class="layui-inline layui-show-xs-block">
-            <button type="button" class="layui-btn layui-btn-normal layui-btn-sm " lay-event="add">
-                <i class="layui-icon">&#xe654;</i>
-                添加
-            </button>
-        </div>
-        <div class="layui-inline layui-show-xs-block">
-            <button type="button" class="layui-btn layui-btn-sm" lay-event="update">
-                <i class="layui-icon">&#xe642;</i>
-                编辑
-            </button>
-        </div>
-        <div class="layui-inline layui-show-xs-block">
-            <button type="button" class="layui-btn layui-btn-danger layui-btn-sm" lay-event="delete">
-                <i class="layui-icon">&#xe640;</i>
-                批量删除
-            </button>
-        </div>
-
-
-        <div class="layui-inline " style="width: 160px">
-                <select id="selectCondition" lay-verify="required" >
-                    <option value="">请选择查询条件</option>
-                    <option value="ID">ID</option>
-                    <option value="姓名">姓名</option>
-                    <option value="年龄">年龄</option>
-                    <option value="级别">级别</option>
-                    <option value="地址">地址</option>
-                    <option value="手机号">手机号</option>
-                    <option value="创建日期">创建日期</option>
-                </select>
-        </div>
-        <div class="layui-inline ">
-            <input type="text"  name="select"  autocomplete="off" class="layui-input">
-        </div>
-        <div class="layui-inline layui-show-xs-block">
-            <button type="button" class="layui-btn layui-btn layui-btn-sm" lay-event="search">
-                <i class="layui-icon">&#xe615;</i>
-                查询
-            </button>
-        </div>
-    </form>
-</div>

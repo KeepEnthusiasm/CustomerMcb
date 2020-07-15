@@ -215,6 +215,7 @@
             }
             ,btn2: function(index, layero){
                 $(".layui-laypage-btn")[0].click();
+                location.reload();
             }
         });
             $.ajax({

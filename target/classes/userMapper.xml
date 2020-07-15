@@ -10,6 +10,15 @@
             #{id}
         </foreach>
     </delete>
+    <delete id="deleteSelectForMap" parameterType="Map">
+        delete from
+        user
+        where uname in
+        <foreach collection="list" open="(" close=")" item="user" separator=",">
+            #{user.uname}
+        </foreach>
+    </delete>
+
     <select id="findByName" resultType="cn.mcb.pojo.User">
         select *
         from user

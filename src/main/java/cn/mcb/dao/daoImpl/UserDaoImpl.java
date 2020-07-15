@@ -7,6 +7,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Map;
+
 public class UserDaoImpl implements IUserDao {
     @Override
     public User login(User user) {
@@ -30,6 +32,11 @@ public class UserDaoImpl implements IUserDao {
 
     @Override
     public void delete(int id) {
+
+    }
+
+    @Override
+    public void deleteSelectForMap(List<Map> list) {
 
     }
 

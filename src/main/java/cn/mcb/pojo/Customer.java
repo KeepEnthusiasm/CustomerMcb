@@ -12,6 +12,16 @@ public class Customer {
     private String cemail;
     private String clevel;
 
+    public Customer(){}
+    public Customer(String cname,int cage,String cgender,String clevel,String caddress,String cphone,String ccreattime){
+        this.cname=cname;
+        this.cage=cage;
+        this.cgender=cgender;
+        this.clevel=clevel;
+        this.caddress=caddress;
+        this.cphone=cphone;
+        this.ccreattime=ccreattime;
+    }
     public int getCid() {
         return cid;
     }

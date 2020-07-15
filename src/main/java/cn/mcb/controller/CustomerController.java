@@ -2,30 +2,38 @@ package cn.mcb.controller;
 
 import cn.mcb.pojo.Customer;
 import cn.mcb.service.serviceImpl.CustomerServiceImpl;
+import cn.mcb.utils.CustomerPlus;
+import cn.mcb.utils.ImportExcelUtils;
 import cn.mcb.utils.PageCustomer;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.apache.commons.beanutils.ConvertUtils;
-import org.apache.ibatis.annotations.Insert;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.PrintWriter;
 import java.util.List;
+import java.util.Map;
 
 @Controller
-
 public class CustomerController {
     @Autowired
     private CustomerServiceImpl customerService;
-
+    @Autowired
+    ImportExcelUtils importExcelUtils;
     @RequestMapping("/selectListForLayui")
     @ResponseBody
-    public PageCustomer findAllForLayui(@RequestParam(value = "pn",defaultValue = "1") Integer pn, int limit,String cname){
+    public PageCustomer findAllForLayui(@RequestParam(value = "pn",defaultValue = "1") Integer pn, int limit){
         PageHelper.startPage(pn,limit);
+//        List<Customer> customerList = customerService.findByConditionForNew(customer);
         List<Customer> customerList = customerService.findAll();
         String msg="1";
         PageInfo<Customer> pageInfo = new PageInfo<Customer>(customerList,5);
@@ -101,5 +109,49 @@ public class CustomerController {
         PageCustomer pageCustomer = new PageCustomer(msg,counts,customerList);
         return pageCustomer;
     }
+    @RequestMapping(value = "/selectByConditionForNew")
+    @ResponseBody
+    public PageCustomer selectByConditionForNew(@RequestParam(value = "pn",defaultValue = "1") Integer pn, int limit,HttpServletRequest httpServletRequest){
+        PageHelper.startPage(pn,limit);
+        List<Customer> customerList = customerService.findByConditionForNew(httpServletRequest);
+        String msg="1";
+        PageInfo<Customer> pageInfo = new PageInfo<Customer>(customerList,5);
+        int counts = (int)pageInfo.getTotal();
+        PageCustomer pageCustomer = new PageCustomer(msg,counts,customerList);
 
+        return pageCustomer;
+    }
+    @RequestMapping("/importExcel")
+    @ResponseBody
+    public String importExcel(MultipartFile file){
+        String msg="0";
+        String resultMsg = customerService.importExcel(file);
+        msg=resultMsg;
+        return msg;
+    }
+    @RequestMapping("/selectDataCounts")
+    @ResponseBody
+    public Map selectDataCounts(){
+        Map map = customerService.selectDataCounts();
+        return map;
+    }
+    @RequestMapping("/selectCgenderCounts")
+    @ResponseBody
+    public Map selectCgenderCounts(){
+        Map map = customerService.selectCgenderAllCounts();
+        return map;
+    }
+    @RequestMapping("/selectClevelCounts")
+    @ResponseBody
+    public Map  selectClevelCounts(){
+        Map map = customerService. selectClevelAllCounts();
+        return map;
+    }
+
+    @RequestMapping("/selectWeekEveryDayCounts")
+    @ResponseBody
+    public Map  selectWeekEveryDayCounts(){
+        Map map = customerService.selectWeekEveryDayCounts();
+        return map;
+    }
 }

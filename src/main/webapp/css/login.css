@@ -6,9 +6,7 @@
 */
 .login-bg{
     /*background: #eeeeee url() 0 0 no-repeat;*/
-     background:url(../images/bg.png) no-repeat center;
-    background-size: cover;
-    overflow: hidden;
+
 }
 .login{
     margin: 120px auto 0 auto;
@@ -32,18 +30,18 @@
 .login .message {
     margin: 10px 0 0 -58px;
     padding: 18px 10px 18px 60px;
-    background: #189F92;
     position: relative;
-    color: #fff;
-    font-size: 16px;
+    color: #0C0C0C;
+    font-size: 30px;
+    font-family: 微软雅黑;
 }
-.login #darkbannerwrap {
-    background: url(../images/aiwrap.png);
-    width: 18px;
-    height: 10px;
-    margin: 0 0 20px -58px;
-    position: relative;
-}
+/*.login #darkbannerwrap {*/
+/*    background: url(../images/aiwrap.png);*/
+/*    width: 18px;*/
+/*    height: 10px;*/
+/*    margin: 0 0 20px -58px;*/
+/*    position: relative;*/
+/*}*/
 
 .login input[type=text],
 .login input[type=file],

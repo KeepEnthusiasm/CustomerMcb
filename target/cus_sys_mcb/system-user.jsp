@@ -5,6 +5,24 @@
   Time: 16:12
   To change this template use File | Settings | File Templates.
 --%>
+<%--<script src="js/jquery.min.js"></script>--%>
+<%--<script>--%>
+<%--    window.onload =function () {--%>
+<%--        $.ajax(--%>
+<%--            {--%>
+<%--                url:"getLoginUser"--%>
+<%--                ,type:"post"--%>
+<%--                ,success:function (data) {--%>
+<%--                    if (data=="0"){--%>
+<%--                        alert("您还没有登录哦，请返回登陆！");--%>
+<%--                        window.location.href = "login.jsp";--%>
+<%--                        window.stop();--%>
+<%--                    }--%>
+<%--                }--%>
+<%--            }--%>
+<%--        )--%>
+<%--    }--%>
+<%--</script>--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <!DOCTYPE html>
 <html>
@@ -24,7 +42,7 @@
         </ul>
         <ul class="layui-nav layui-layout-right">
             <li class="layui-nav-item">
-                <a href="javascript:;">
+                <a id="uname" href="javascript:;">
                     <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
                     ${sessionScope.uname}
                 </a>
@@ -44,35 +62,35 @@
                 <li class="layui-nav-item layui-nav-itemed">
                     <a  href="javascript:Iframe('list.jsp');">客户信息</a>
                 </li>
+                <li class="layui-nav-item"><a href="javascript:Iframe('cusDataCount.jsp');">数据统计</a></li>
+                <li class="layui-nav-item"><a href="javascript:Iframe('cusDataShow.jsp');">数据分析</a></li>
                 <li class="layui-nav-item" >
                     <a href="javascript:Iframe('noticeList-user.jsp');" >公司公告</a>
                 </li>
                 <li class="layui-nav-item"><a href="javascript:Iframe('userInfo.jsp');">我的信息</a></li>
+                <li class="layui-nav-item"><a href="javascript:Iframe('systemInfo.jsp');">系统信息</a></li>
             </ul>
         </div>
     </div>
 
     <div class="layui-body">
-        <iframe id="myIframe" src='list.jsp' width="100%" height="650px" frameborder="0" scrolling="no" ></iframe>
+        <iframe id="myIframe" src='list.jsp' width="100%" height="680px" frameborder="0" scrolling="yes" ></iframe>
     </div>
 
-    <div class="layui-footer">
+    <div class="layui-footer" >
         <!-- 底部固定区域 -->
-        © layui.com - 底部固定区域
+        © 2020 郑州科技学院 计算机科学与技术6班 201642304745 马常彪—H公司客户信息管理系统
     </div>
 </div>
-<script src="lib/layui/layui.js"></script>
+<script src="js/jquery.min.js"></script>
 <script>
     //JavaScript代码区域
-    layui.use('element','layer', function(){
-        var element = layui.element;
-        var layer = layui.layer;
 
-    });
     function Iframe(src) {
         // $("#myIframe").attr("src","noticeList-admin.jsp");
         document.getElementById("myIframe").src=src;
     }
+
 </script>
 </body>
 </html>
